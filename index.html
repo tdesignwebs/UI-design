@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* General button styles for ALL buttons */
+        body {
+            background-color: #010118;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .main-box-for-buttons {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 764px;
+            justify-content: center;
+            height: fit-content;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 10px;
+            outline: none;
+            transform: translateZ(0); /* Enable hardware acceleration */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        button h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Default hover effect for ALL buttons */
+        button:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+
+        /* Blue buttons (nicer colors) */
+        
+        .btn-blue-5 { background: #e0cdff; }
+        .btn-blue-6 { background: #d8c0ff; }
+        .btn-blue-7 { background: #cfb4ff; }
+        .btn-blue-8 { background: #c6a8ff; }
+        .btn-blue-9 { background: #bd9bff; }
+        .btn-blue-10 { background: #b48fff; }
+        .btn-blue-11 { background: #aa83ff; }
+        .btn-blue-12 { background: #a077ff; }
+        .btn-blue-13 { background: #956bff; }
+        .btn-blue-14 { background: #895fff; }
+        .btn-blue-15 { background: #7d52ff; }
+        .btn-blue-16 { background: #7046ff; }
+        .btn-blue-17 { background: #6039ff; }
+        .btn-blue-18 { background: #4e2bff; }
+        .btn-blue-19 { background: #361aff; }
+        .btn-blue-20 { background: #0000ff; }
+        .btn-blue-21 { background: #0000ff; }
+        .btn-blue-22 { background: #0e04f0; }
+        .btn-blue-23 { background: #1707e1; }
+        .btn-blue-24 { background: #1c0ad2; }
+        .btn-blue-25 { background: #1f0cc4; }
+        .btn-blue-26 { background: #210db5; }
+        .btn-blue-27 { background: #220fa7; }
+        .btn-blue-28 { background: #230f99; }
+        .btn-blue-29 { background: #23108c; }
+        .btn-blue-30 { background: #23107e; }
+        .btn-blue-31 { background: #221071; }
+        .btn-blue-32 { background: #211064; }
+        .btn-blue-33 { background: #1f1057; }
+        .btn-blue-34 { background: #1d0f4b; }
+        .btn-blue-35 { background: #1a0e3f; }
+        .btn-blue-36 { background: #180d33; }
+        .btn-blue-37 { background: #160a28; }
+        .btn-blue-38 { background: #12061d; }
+        .btn-blue-39 { background: #0a0312; }
+        .btn-blue-40 { background: #000000;}
+
+      
+        .btn-green-5 { background: #e0ffd6; }
+        .btn-green-6 { background: #d8ffcb; }
+        .btn-green-7 { background: #d0ffc1; }
+        .btn-green-8 { background: #c7ffb6; }
+        .btn-green-9 { background: #beffac; }
+        .btn-green-10 { background: #b5ffa1; }
+        .btn-green-11 { background: #abff96; }
+        .btn-green-12 { background: #a1ff8b; }
+        .btn-green-13 { background: #97ff80; }
+        .btn-green-14 { background: #8bff74; }
+        .btn-green-15 { background: #7fff68; }
+        .btn-green-16 { background: #72ff5b; }
+        .btn-green-17 { background: #62ff4d; }
+        .btn-green-18 { background: #50ff3d; }
+        .btn-green-19 { background: #38ff29; }
+        .btn-green-20 { background: #00ff00; }
+        .btn-green-21 { background: #00ff00; }
+        .btn-green-22 { background: #0ff009; }
+        .btn-green-23 { background: #18e10f; }
+        .btn-green-24 { background: #1dd213; }
+        .btn-green-25 { background: #20c416; }
+        .btn-green-26 { background: #22b518; }
+        .btn-green-27 { background: #24a719; }
+        .btn-green-28 { background: #24991a; }
+        .btn-green-29 { background: #248c1a; }
+        .btn-green-30 { background: #247e1a; }
+        .btn-green-31 { background: #237119; }
+        .btn-green-32 { background: #226419; }
+        .btn-green-33 { background: #205717; }
+        .btn-green-34 { background: #1e4b16; }
+        .btn-green-35 { background: #1b3f14; }
+        .btn-green-36 { background: #183313; }
+        .btn-green-37 { background: #152810; }
+        .btn-green-38 { background: #121d0c; }
+        .btn-green-39 { background: #0a1206; }
+        .btn-green-40 { background: #000000; }
+
+       
+        .btn-orange-5 { background: #ffe5ce; }
+        .btn-orange-6 { background: #ffdec2; }
+        .btn-orange-7 { background: #ffd7b5; }
+        .btn-orange-8 { background: #ffd1a9; }
+        .btn-orange-9 { background: #ffca9e; }
+        .btn-orange-10 { background: #ffc492; }
+        .btn-orange-11 { background: #ffbd86; }
+        .btn-orange-12 { background: #ffb67a; }
+        .btn-orange-13 { background: #ffb06e; }
+        .btn-orange-14 { background: #ffa962; }
+        .btn-orange-15 { background: #ffa256; }
+        .btn-orange-16 { background: #ff9c49; }
+        .btn-orange-17 { background: #ff953c; }
+        .btn-orange-18 { background: #ff8e2e; }
+        .btn-orange-19 { background: #ff871d; }
+        .btn-orange-20 { background: #ff8000; }
+        .btn-orange-21 { background: #ff8000; }
+        .btn-orange-22 { background: #f07904; }
+        .btn-orange-23 { background: #e17208; }
+        .btn-orange-24 { background: #d36b0b; }
+        .btn-orange-25 { background: #c4640e; }
+        .btn-orange-26 { background: #b65d0f; }
+        .btn-orange-27 { background: #a85710; }
+        .btn-orange-28 { background: #9a5011; }
+        .btn-orange-29 { background: #8d4a12; }
+        .btn-orange-30 { background: #7f4312; }
+        .btn-orange-31 { background: #723d12; }
+        .btn-orange-32 { background: #653711; }
+        .btn-orange-33 { background: #593111; }
+        .btn-orange-34 { background: #4d2a10; }
+        .btn-orange-35 { background: #40250f; }
+        .btn-orange-36 { background: #351f0d; }
+        .btn-orange-37 { background: #2a190a; }
+        .btn-orange-38 { background: #1f1307; }
+        .btn-orange-39 { background: #140b03; }
+        .btn-orange-40 { background: #000000; }
+
+
+      
+        .btn-light-blue-5 { background: #e0fffa; }
+        .btn-light-blue-6 { background: #d7fff9; }
+        .btn-light-blue-7 { background: #cffff7; }
+        .btn-light-blue-8 { background: #c6fff6; }
+        .btn-light-blue-9 { background: #bdfff5; }
+        .btn-light-blue-10 { background: #b4fff3; }
+        .btn-light-blue-11 { background: #aafff2; }
+        .btn-light-blue-12 { background: #a0fff1; }
+        .btn-light-blue-13 { background: #96fff0; }
+        .btn-light-blue-14 { background: #8bffee; }
+        .btn-light-blue-15 { background: #7effed; }
+        .btn-light-blue-16 { background: #71ffec; }
+        .btn-light-blue-17 { background: #62ffeb; }
+        .btn-light-blue-18 { background: #50ffe9; }
+        .btn-light-blue-19 { background: #38ffe8; }
+        .btn-light-blue-20 { background: #00ffe7; }
+        .btn-light-blue-21 { background: #00ffe7; }
+        .btn-light-blue-22 { background: #0ff0d9; }
+        .btn-light-blue-23 { background: #18e1cc; }
+        .btn-light-blue-24 { background: #1dd2bf; }
+        .btn-light-blue-25 { background: #20c4b1; }
+        .btn-light-blue-26 { background: #22b5a4; }
+        .btn-light-blue-27 { background: #24a798; }
+        .btn-light-blue-28 { background: #24998b; }
+        .btn-light-blue-29 { background: #248b7f; }
+        .btn-light-blue-30 { background: #247e72; }
+        .btn-light-blue-31 { background: #237167; }
+        .btn-light-blue-32 { background: #21645b; }
+        .btn-light-blue-33 { background: #20574f; }
+        .btn-light-blue-34 { background: #1d4b44; }
+        .btn-light-blue-35 { background: #1b3f39; }
+        .btn-light-blue-36 { background: #18332f; }
+        .btn-light-blue-37 { background: #152825; }
+        .btn-light-blue-38 { background: #111d1b; }
+        .btn-light-blue-39 { background: #0a1210; }
+        .btn-light-blue-40 { background: #000000; }
+        /* Output box */
+        .output-box {
+            width: 60%;
+            height: 500px;
+            background-color: #1e1e2f;
+            border: 2px solid #444;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px auto;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .output-box pre {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box-for-buttons">
+        <!-- Blue Buttons -->
+        <div class="box-buttons">
+          
+            <button class="btn-blue-5"><h1>Get started</h1></button>
+            <button class="btn-blue-6"><h1>Get started</h1></button>
+            <button class="btn-blue-7"><h1>Get started</h1></button>
+            <button class="btn-blue-8"><h1>Get started</h1></button>
+            <button class="btn-blue-9"><h1>Get started</h1></button>
+            <button class="btn-blue-10"><h1>Get started</h1></button>
+            <button class="btn-blue-11"><h1>Get started</h1></button>
+            <button class="btn-blue-12"><h1>Get started</h1></button>
+            <button class="btn-blue-13"><h1>Get started</h1></button>
+            <button class="btn-blue-14"><h1>Get started</h1></button>
+            <button class="btn-blue-15"><h1>Get started</h1></button>
+            <button class="btn-blue-16"><h1>Get started</h1></button>
+            <button class="btn-blue-17"><h1>Get started</h1></button>
+            <button class="btn-blue-18"><h1>Get started</h1></button>
+            <button class="btn-blue-19"><h1>Get started</h1></button>
+            <button class="btn-blue-20"><h1>Get started</h1></button>
+            <button class="btn-blue-21"><h1>Get started</h1></button>
+            <button class="btn-blue-22"><h1>Get started</h1></button>
+            <button class="btn-blue-23"><h1>Get started</h1></button>
+            <button class="btn-blue-24"><h1>Get started</h1></button>
+            <button class="btn-blue-25"><h1>Get started</h1></button>
+            <button class="btn-blue-26"><h1>Get started</h1></button>
+            <button class="btn-blue-27"><h1>Get started</h1></button>
+            <button class="btn-blue-28"><h1>Get started</h1></button>
+            <button class="btn-blue-29"><h1>Get started</h1></button>
+            <button class="btn-blue-30"><h1>Get started</h1></button>
+            <button class="btn-blue-31"><h1>Get started</h1></button>
+            <button class="btn-blue-32"><h1>Get started</h1></button>
+            <button class="btn-blue-33"><h1>Get started</h1></button>
+            <button class="btn-blue-34"><h1>Get started</h1></button>
+            <button class="btn-blue-35"><h1>Get started</h1></button>
+            <button class="btn-blue-36"><h1>Get started</h1></button>
+            <button class="btn-blue-37"><h1>Get started</h1></button>
+            <button class="btn-blue-38"><h1>Get started</h1></button>
+            <button class="btn-blue-39"><h1>Get started</h1></button>
+            <button class="btn-blue-40"><h1>Get started</h1></button>
+        </div>
+        <div class="box-buttons">
+            <button class="btn-green-40"><h1>Get started</h1></button>
+            <button class="btn-green-39"><h1>Get started</h1></button>
+            <button class="btn-green-38"><h1>Get started</h1></button>
+            <button class="btn-green-37"><h1>Get started</h1></button>
+            <button class="btn-green-36"><h1>Get started</h1></button>
+            <button class="btn-green-35"><h1>Get started</h1></button>
+            <button class="btn-green-35"><h1>Get started</h1></button>
+            <button class="btn-green-34"><h1>Get started</h1></button>
+            <button class="btn-green-33"><h1>Get started</h1></button>
+            <button class="btn-green-32"><h1>Get started</h1></button>
+            <button class="btn-green-31"><h1>Get started</h1></button>
+            <button class="btn-green-30"><h1>Get started</h1></button>
+            <button class="btn-green-29"><h1>Get started</h1></button>
+            <button class="btn-green-28"><h1>Get started</h1></button>
+            <button class="btn-green-27"><h1>Get started</h1></button>
+            <button class="btn-green-26"><h1>Get started</h1></button>
+            <button class="btn-green-25"><h1>Get started</h1></button>
+            <button class="btn-green-24"><h1>Get started</h1></button>
+            <button class="btn-green-23"><h1>Get started</h1></button>
+            <button class="btn-green-22"><h1>Get started</h1></button>
+            <button class="btn-green-21"><h1>Get started</h1></button>
+            <button class="btn-green-20"><h1>Get started</h1></button>
+            <button class="btn-green-19"><h1>Get started</h1></button>
+            <button class="btn-green-18"><h1>Get started</h1></button>
+            <button class="btn-green-17"><h1>Get started</h1></button>
+            <button class="btn-green-16"><h1>Get started</h1></button>
+            <button class="btn-green-15"><h1>Get started</h1></button>
+            <button class="btn-green-14"><h1>Get started</h1></button>
+            <button class="btn-green-13"><h1>Get started</h1></button>
+            <button class="btn-green-12"><h1>Get started</h1></button>
+            <button class="btn-green-11"><h1>Get started</h1></button>
+            <button class="btn-green-10"><h1>Get started</h1></button>
+            <button class="btn-green-9"><h1>Get started</h1></button>
+            <button class="btn-green-8"><h1>Get started</h1></button>
+            <button class="btn-green-7"><h1>Get started</h1></button>
+            <button class="btn-green-6"><h1>Get started</h1></button>
+        </div>
+        <div class="box-buttons">
+        
+            <button class="btn-orange-5"><h1>Get started</h1></button>
+            <button class="btn-orange-6"><h1>Get started</h1></button>
+            <button class="btn-orange-7"><h1>Get started</h1></button>
+            <button class="btn-orange-8"><h1>Get started</h1></button>
+            <button class="btn-orange-9"><h1>Get started</h1></button>
+            <button class="btn-orange-10"><h1>Get started</h1></button>
+            <button class="btn-orange-11"><h1>Get started</h1></button>
+            <button class="btn-orange-12"><h1>Get started</h1></button>
+            <button class="btn-orange-13"><h1>Get started</h1></button>
+            <button class="btn-orange-14"><h1>Get started</h1></button>
+            <button class="btn-orange-15"><h1>Get started</h1></button>
+            <button class="btn-orange-16"><h1>Get started</h1></button>
+            <button class="btn-orange-17"><h1>Get started</h1></button>
+            <button class="btn-orange-18"><h1>Get started</h1></button>
+            <button class="btn-orange-19"><h1>Get started</h1></button>
+            <button class="btn-orange-20"><h1>Get started</h1></button>
+            <button class="btn-orange-21"><h1>Get started</h1></button>
+            <button class="btn-orange-22"><h1>Get started</h1></button>
+            <button class="btn-orange-23"><h1>Get started</h1></button>
+            <button class="btn-orange-24"><h1>Get started</h1></button>
+            <button class="btn-orange-25"><h1>Get started</h1></button>
+            <button class="btn-orange-26"><h1>Get started</h1></button>
+            <button class="btn-orange-27"><h1>Get started</h1></button>
+            <button class="btn-orange-28"><h1>Get started</h1></button>
+            <button class="btn-orange-29"><h1>Get started</h1></button>
+            <button class="btn-orange-30"><h1>Get started</h1></button>
+            <button class="btn-orange-31"><h1>Get started</h1></button>
+            <button class="btn-orange-32"><h1>Get started</h1></button>
+            <button class="btn-orange-33"><h1>Get started</h1></button>
+            <button class="btn-orange-34"><h1>Get started</h1></button>
+            <button class="btn-orange-35"><h1>Get started</h1></button>
+            <button class="btn-orange-36"><h1>Get started</h1></button>
+            <button class="btn-orange-37"><h1>Get started</h1></button>
+            <button class="btn-orange-38"><h1>Get started</h1></button>
+            <button class="btn-orange-39"><h1>Get started</h1></button>
+            <button class="btn-orange-40"><h1>Get started</h1></button>
+        </div>
+        <div class="box-buttons">
+            <button class="btn-light-blue-40"><h1>Get started</h1></button>
+            <button class="btn-light-blue-39"><h1>Get started</h1></button>
+            <button class="btn-light-blue-38"><h1>Get started</h1></button>
+            <button class="btn-light-blue-37"><h1>Get started</h1></button>
+            <button class="btn-light-blue-36"><h1>Get started</h1></button>
+            <button class="btn-light-blue-35"><h1>Get started</h1></button>
+            <button class="btn-light-blue-35"><h1>Get started</h1></button>
+            <button class="btn-light-blue-34"><h1>Get started</h1></button>
+            <button class="btn-light-blue-33"><h1>Get started</h1></button>
+            <button class="btn-light-blue-32"><h1>Get started</h1></button>
+            <button class="btn-light-blue-31"><h1>Get started</h1></button>
+            <button class="btn-light-blue-30"><h1>Get started</h1></button>
+            <button class="btn-light-blue-29"><h1>Get started</h1></button>
+            <button class="btn-light-blue-28"><h1>Get started</h1></button>
+            <button class="btn-light-blue-27"><h1>Get started</h1></button>
+            <button class="btn-light-blue-26"><h1>Get started</h1></button>
+            <button class="btn-light-blue-25"><h1>Get started</h1></button>
+            <button class="btn-light-blue-24"><h1>Get started</h1></button>
+            <button class="btn-light-blue-23"><h1>Get started</h1></button>
+            <button class="btn-light-blue-22"><h1>Get started</h1></button>
+            <button class="btn-light-blue-21"><h1>Get started</h1></button>
+            <button class="btn-light-blue-20"><h1>Get started</h1></button>
+            <button class="btn-light-blue-19"><h1>Get started</h1></button>
+            <button class="btn-light-blue-18"><h1>Get started</h1></button>
+            <button class="btn-light-blue-17"><h1>Get started</h1></button>
+            <button class="btn-light-blue-16"><h1>Get started</h1></button>
+            <button class="btn-light-blue-15"><h1>Get started</h1></button>
+            <button class="btn-light-blue-14"><h1>Get started</h1></button>
+            <button class="btn-light-blue-13"><h1>Get started</h1></button>
+            <button class="btn-light-blue-12"><h1>Get started</h1></button>
+            <button class="btn-light-blue-11"><h1>Get started</h1></button>
+            <button class="btn-light-blue-10"><h1>Get started</h1></button>
+            <button class="btn-light-blue-9"><h1>Get started</h1></button>
+            <button class="btn-light-blue-8"><h1>Get started</h1></button>
+            <button class="btn-light-blue-7"><h1>Get started</h1></button>
+            <button class="btn-light-blue-6"><h1>Get started</h1></button>
+        </div>
+        
+
+        <div class="output-box">
+            <pre id="output-styles"></pre>
+            <br>
+            <br>
+            <br>
+            <pre id="output-html"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Function to copy button styles to clipboard and display in output box
+        function copyStyles(button) {
+            const styles = window.getComputedStyle(button);
+
+            // Extract the required styles
+            const width = styles.width;
+            const height = styles.height;
+            const border = styles.border;
+            const borderRadius = styles.borderRadius;
+            const backgroundColor = styles.backgroundColor;
+
+            // Create a string with the styles
+            const styleString = `.button-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${backgroundColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color:white;\n }`;
+
+            // Create the HTML example
+            const htmlString = `<button class="button-copy">Get started</button>`;
+
+            // Display the styles and HTML in the output box
+            document.getElementById("output-styles").textContent = styleString;
+            document.getElementById("output-html").textContent = htmlString;
+
+            // Copy the styles to the clipboard
+            navigator.clipboard.writeText(styleString)
+                .then(() => {
+                })
+                .catch((err) => {
+                    console.error("Failed to copy styles: ", err);
+                });
+        }
+
+        // Add click event listeners to all buttons
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                copyStyles(button);
+            });
+        });
+    </script>
+</body>
+
+</html>
