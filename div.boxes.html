@@ -8,7 +8,20 @@
     <title>Document</title>
 
     <style>
-        /* General button styles for ALL buttons */
+        
+            .btn-white-1{ background-color:  #edf1f6;}
+            .btn-white-2{ background-color:  #ccd7e4;}
+            .btn-white-3{ background-color:  #abbdd2;}
+            .btn-white-4{ background-color:  #89a3c1;}
+            .btn-white-5{ background-color:  #6889af;}
+            .btn-white-6{ background-color:  #4f6f95;}
+            .btn-white-7{ background-color:  #3d5674;}
+            .btn-white-8{ background-color:  #2c3d52;}
+            .btn-white-9{ background-color:  #1a2531;}
+            .btn-white-10{ background-color:  #080c10;}
+
+
+    /* General button styles for ALL buttons */
         body {
             background-color: #010118;
             font-family: Arial, sans-serif;
@@ -319,7 +332,7 @@
      
         /* Output box */
         .output-box {
-            width: 90%;
+            width: 80%;
             max-width: 764px;
             min-height: 300px;
             height: fit-content;
@@ -343,7 +356,27 @@
 
 <body>
     <div class="main-box-for-buttons">
+
+        <div class="output-box">
+            <pre id="output-styles"></pre>
+            <br>
+            <br>
+            <br>
+            <pre id="output-html"></pre>
+        </div>
         <!-- Blue Buttons -->
+        <div class="box-buttons">
+            <div class="boxes btn-white-1" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-2" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-3" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-4" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-5"><h1>Get started</h1></div>
+            <div class="boxes btn-white-6"><h1>Get started</h1></div>
+            <div class="boxes btn-white-7"><h1>Get started</h1></div>
+            <div class="boxes btn-white-8"><h1>Get started</h1></div>
+            <div class="boxes btn-white-9"><h1>Get started</h1></div>
+            <div class="boxes btn-white-10"><h1>Get started</h1></div>
+        </div>
         <div class="box-buttons">
             <div class="boxes btn-blue-36"><h1>Get started</h1></div>
             <div class="boxes btn-blue-35"><h1>Get started</h1></div>
@@ -571,13 +604,7 @@
 
        
     
-        <div class="output-box">
-            <pre id="output-styles"></pre>
-            <br>
-            <br>
-            <br>
-            <pre id="output-html"></pre>
-        </div>
+      
     </div>
 
 
@@ -623,7 +650,7 @@
     const backgroundColor = styles.backgroundColor;
 
     // Create a string with the styles
-    const styleString = `.div-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${backgroundColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  }`;
+    const styleString = `.div-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${hexColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  }`;
    const htmlString = `<div class="div-copy">${hexColor}</div>`;
 
             document.getElementById("output-styles").textContent = styleString;
