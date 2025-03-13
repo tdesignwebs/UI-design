@@ -592,7 +592,22 @@
         </div>
     </div>
 
-    <script>
+<script>
+        // Function to set the text color of the button text to match the button's background color
+        function setButtonTextColor() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+                const h1 = button.querySelector("h1.button-text");
+                if (h1) {
+                    const bgColor = window.getComputedStyle(button).backgroundColor;
+                    h1.style.color = bgColor;
+                }
+            });
+        }
+
+        // Call the function to set the text color
+        setButtonTextColor();
+
         // Function to copy button styles to clipboard and display in output box
         function copyStyles(button) {
             const styles = window.getComputedStyle(button);
@@ -630,6 +645,45 @@
                 copyStyles(button);
             });
         });
+    </script>
+       <script>
+        // Function to convert RGB color to HEX
+        function rgbToHex(rgb) {
+            // Extract the RGB values from the string
+            const rgbValues = rgb.match(/\d+/g);
+            if (!rgbValues) return "#000000"; // Default to black if no match
+
+            // Convert each RGB value to HEX
+            const hex = rgbValues
+                .map(value => {
+                    const hexValue = parseInt(value).toString(16);
+                    return hexValue.length === 1 ? "0" + hexValue : hexValue;
+                })
+                .join("");
+
+            return `#${hex}`;
+        }
+
+        // Function to set the text of <h1> to the button's background color code
+        function setButtonTextToColorCode() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+                const h1 = button.querySelector("h1");
+                if (h1) {
+                    // Get the computed background color of the button
+                    const bgColor = window.getComputedStyle(button).backgroundColor;
+
+                    // Convert RGB to HEX (if necessary)
+                    const hexColor = rgbToHex(bgColor);
+
+                    // Set the text of <h1> to the HEX color code
+                    h1.textContent = hexColor;
+                }
+            });
+        }
+
+        // Call the function to set the text to the color code
+        setButtonTextToColorCode();
     </script>
 </body>
 
