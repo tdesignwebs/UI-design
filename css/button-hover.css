@@ -1,0 +1,1569 @@
+.btn-linear-1 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #1f0cc4 0%,
+            #4e2bff 55%,
+            #180d33 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-1:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-1 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-2 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #7046ff 0%,
+            #4e2bff 55%,
+            #23107e 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-2:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-2 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+.btn-linear-3 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+            #aa83ff 0%,
+            #361aff 55%,
+            #220fa7 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-3:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-3 {
+        transition: linear;
+    }
+}
+
+.btn-linear-4 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+            #a077ff 0%,
+            #4e2bff 55%,
+            #0000ff 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-4:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-4 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+.btn-linear-5 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #4e2bff 0%,
+            #b48fff 55%,
+            #1707e1 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-5:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-5 {
+        transition: linear;
+    }
+}
+
+.btn-linear-6 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #4e2bff 0%,
+            #b48fff 55%,
+            #6039ff 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-6:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-6 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+.btn-linear-7 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #895fff 0%,
+            #7046ff 55%,
+            #7d52ff 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-7:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-7 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-8 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #7d52ff 0%,
+            #956bff 55%,
+            #b48fff 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-8:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-8 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+
+.btn-linear-9 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #2c3d52 0%,
+            #1a2531 55%,
+            #080c10 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-9:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-9 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-10 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #3d5674 0%,
+            #2c3d52 55%,
+            #1a2531 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-10:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-10 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-11 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #4f6f95 0%,
+            #3d5674 55%,
+            #2c3d52 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-11:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-11 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-12 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #6889af 0%,
+            #4f6f95 55%,
+            #3d5674 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-12:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-12 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-13 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #7698ba 0%,
+            #6889af 55%,
+            #4f6f95 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-13:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-13 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-14 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #99bcdf 0%,
+            #7698ba 55%,
+            #6889af 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-14:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-14 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-15 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #99bcdf 0%,
+            #abbdd2 55%,
+            #89a3c1 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-15:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-15 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-16 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #4f6f95 0%,
+            #99bcdf 55%,
+            #3d5674 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-16:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-16 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-17 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #2e1a43 0%,
+            #351c4e 55%,
+            #21142e 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-17:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-17 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-18 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #3b1f5a 0%,
+            #492471 55%,
+            #2e1a43 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-18:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-18 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-19 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #572989 0%,
+            #652ea1 55%,
+            #3b1f5a 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-19:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-19 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+.btn-linear-20 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #652ea1 0%,
+            #7b36c8 55%,
+            #6c31ae 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-20:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-20 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+.btn-linear-21 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #9247e4 0%,
+            #b47bed 55%,
+            #9247e4 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-21:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-21 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+
+.btn-linear-22 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #7d52ff 0%,
+            #7b36c8 55%,
+            #a05ce8 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-22:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-22 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-23 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #8a3be2 0%,
+            #ae71eb 55%,
+            #a05ce8 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-23:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-23 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+
+.btn-linear-24 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #422265 0%,
+            #8239d5 55%,
+            #bb85ef 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-24:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-24 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-25 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #471731 0%,
+            #511938 55%,
+            #341425 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-25:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-25 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-26 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #6f1b4c 0%,
+            #5b1a3e 55%,
+            #471731 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-26:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-26 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-27 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #a51b6f 0%,
+            #cb2e8b 55%,
+            #5b1a3e 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-27:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-27 {
+        transition: linear;
+    }
+}
+
+
+.btn-linear-28 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #c71585 0%,
+            #cb2e8b 55%,
+            #9a1b68 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-28:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-28 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-29 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #b01976 0%,
+            #df73aa 55%,
+            #bc187e 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-29:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-29 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-30 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+            #bc187e 0%,
+            #d34d97 55%,
+            #bc187e 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-30:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-30 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-31 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #cb2e8b 0%,
+            #c71585 55%,
+            #e27eb0 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-31:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-31 {
+        transition: linear;
+    }
+}
+
+.btn-linear-32 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #9a1b68 0%,
+            #cf3f91 55%,
+            #db67a4 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-32:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-32 {
+        transition: linear;
+    }
+}
+
+
+
+
+.btn-linear-33 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #c51807 0%,
+            #a91b0a 55%,
+            #671a0b 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-33:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-33 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-34 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #d31506 0%,
+            #b71a09 55%,
+            #801c0b 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-34:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-34 {
+        transition: linear;
+    }
+}
+
+
+.btn-linear-35 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #f00a02 0%,
+            #d31506 55%,
+            #9b1c0a 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-35:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-35 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-36 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #ff6c48 0%,
+            #ff2c13 55%,
+            #e21104 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-36:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-36 {
+        transition: linear;
+    }
+}
+
+.btn-linear-37 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #bc187e 0%,
+            #b71a09 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-37:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-37 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-38 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #ff2c13 0%,
+            #ff6c48 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-38:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-38 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-39 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #a91b0a 0%,
+            #ff7854 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-39:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-39 {
+        transition: linear;
+    }
+}
+
+
+
+.btn-linear-40 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+
+
+            #ff0000 0%,
+            #ff512f 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-40:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-40 {
+        transition: linear;
+    }
+}
+
+
+
+
+
+
+/* Button 40 */
+.btn-linear-41 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+    #f07604 0%,
+     #d3690b 55%,
+    #b65b0f 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-41:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-41 {
+        transition: linear;
+    }
+}
+
+
+
+/* Button 42 */
+.btn-linear-42 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-42:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-42 {
+        transition: linear;
+    }
+}
+
+/* Button 43 */
+.btn-linear-43 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-43:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-43 {
+        transition: linear;
+    }
+}
+
+/* Button 44 */
+.btn-linear-44 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-44:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-44 {
+        transition: linear;
+    }
+}
+
+/* Button 45 */
+.btn-linear-45 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-45:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-45 {
+        transition: linear;
+    }
+}
+
+/* Button 46 */
+.btn-linear-46 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-46:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-46 {
+        transition: linear;
+    }
+}
+
+/* Button 47 */
+.btn-linear-47 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-47:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-47 {
+        transition: linear;
+    }
+}
+
+/* Button 48 */
+.btn-linear-48 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-48:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-48 {
+        transition: linear;
+    }
+}
+
+/* Button 49 */
+.btn-linear-49 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-49:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-49 {
+        transition: linear;
+    }
+}
+
+/* Button 50 */
+.btn-linear-50 {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            #e6eaee 0%,
+            #d9d8e3 55%,
+            #cccdcd 90%);
+    border: none;
+    border-radius: 110px;
+    color: white;
+}
+
+.btn-linear-50:hover {
+    background-position: right top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-linear-50 {
+        transition: linear;
+    }
+}

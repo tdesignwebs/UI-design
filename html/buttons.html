@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/button-hover.css">
+
+    <style>
+        /* General button styles for ALL buttons */
+        body {
+            background-color: #CCD7E4;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .main-box-for-buttons {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 100px;
+            max-width: 764px;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin: 10px;
+            outline: none;
+            transform: translateZ(0); /* Enable hardware acceleration */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        button h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Default hover effect for ALL buttons */
+        button:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+
+        /* Blue buttons (nicer colors) */
+      
+     
+      /* Output box */
+      .output-box {
+            width: 80%;
+            max-width: 764px;
+            min-height: 300px;
+            height: fit-content;
+            background-color: #1e1e2f;
+            border: 2px solid #444;
+            padding: 20px;
+            border-radius: 20px;
+            overflow-y: auto;
+            margin-bottom:20px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .output-box pre {
+            margin: 0;
+            width: fit-content;
+            height: f;
+        }
+
+
+       .color-names{
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: sans-serif;
+       }
+
+       
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="main-box-for-buttons">
+        <!-- Blue Buttons -->
+
+       <h1 class="color-names">hover ones</h1>
+        <div class="box-buttons">
+           <button class="btn-linear-1"> hover </button>
+           <button class="btn-linear-2"> hover </button>
+           <button class="btn-linear-3"> hover </button>
+           <button class="btn-linear-4"> hover </button>
+           <button class="btn-linear-5"> hover </button>
+           <button class="btn-linear-6"> hover </button>
+           <button class="btn-linear-7"> hover </button>
+           <button class="btn-linear-8"> hover </button>
+           <button class="btn-linear-9"> hover </button>
+           <button class="btn-linear-10"> hover </button>
+           <button class="btn-linear-11"> hover </button>
+           <button class="btn-linear-12"> hover </button>
+           <button class="btn-linear-13"> hover </button>
+           <button class="btn-linear-14"> hover </button>
+           <button class="btn-linear-15"> hover </button>
+           <button class="btn-linear-16"> hover </button>
+           <button class="btn-linear-17"> hover </button>
+           <button class="btn-linear-18"> hover </button>
+           <button class="btn-linear-19"> hover </button>
+           <button class="btn-linear-20"> hover </button>
+           <button class="btn-linear-21"> hover </button>
+           <button class="btn-linear-22"> hover </button>
+           <button class="btn-linear-23"> hover </button>
+           <button class="btn-linear-24"> hover </button>
+           <button class="btn-linear-25"> hover </button>
+           <button class="btn-linear-26"> hover </button>
+           <button class="btn-linear-27"> hover </button>
+           <button class="btn-linear-28"> hover </button>
+           <button class="btn-linear-29"> hover </button>
+           <button class="btn-linear-30"> hover </button>
+           <button class="btn-linear-31"> hover </button>
+           <button class="btn-linear-32"> hover </button>
+           <button class="btn-linear-33"> hover </button>
+           <button class="btn-linear-34"> hover </button>
+           <button class="btn-linear-35"> hover </button>
+           <button class="btn-linear-36"> hover </button>
+           <button class="btn-linear-37"> hover </button>
+           <button class="btn-linear-38"> hover </button>
+           <button class="btn-linear-39"> hover </button>
+           <button class="btn-linear-40"> hover </button>
+           <button class="btn-linear-41"> hover </button>
+           <button class="btn-linear-42"> hover </button>
+           <button class="btn-linear-43"> hover </button>
+           <button class="btn-linear-44"> hover </button>
+           <button class="btn-linear-45"> hover </button>
+           <button class="btn-linear-46"> hover </button>
+           <button class="btn-linear-47"> hover </button>
+           <button class="btn-linear-48"> hover </button>
+           <button class="btn-linear-49"> hover </button>
+           <button class="btn-linear-50"> hover </button>
+           
+        </div>
+
+        <h1 class="color-names">white-light-blue</h1>
+        <div class="box-buttons">
+            
+            <button class="boxes btn-white-12" ><h1>Get started</h1></button>
+            <button class="boxes btn-white-11" ><h1>Get started</h1></button>
+            <button class="boxes btn-white-10" ><h1>Get started</h1></button>
+            <button class="boxes btn-white-9" ><h1>Get started</h1></button>
+            <button class="boxes btn-white-8"><h1>Get started</h1></button>
+            <button class="boxes btn-white-7"><h1>Get started</h1></button>
+            <button class="boxes btn-white-6"><h1>Get started</h1></button>
+            <button class="boxes btn-white-5"><h1>Get started</h1></button>
+            <button class="boxes btn-white-4"><h1 style="color: black;">Get started</h1></button>
+            <button class="boxes btn-white-3"><h1 style="color: black;">Get started</h1></button>
+            <button class="boxes btn-white-2"><h1 style="color: black;">Get started</h1></button>
+            <button class="boxes btn-white-1"><h1 style="color: black;">Get started</h1></button>
+        </div>
+        <h1 class="color-names">blue</h1>
+        <div class="box-buttons">
+            <button class="btn-blue-36"><h1>Get started</h1></button>
+            <button class="btn-blue-35"><h1>Get started</h1></button>
+            <button class="btn-blue-35"><h1>Get started</h1></button>
+            <button class="btn-blue-34"><h1>Get started</h1></button>
+            <button class="btn-blue-33"><h1>Get started</h1></button>
+            <button class="btn-blue-32"><h1>Get started</h1></button>
+            <button class="btn-blue-31"><h1>Get started</h1></button>
+            <button class="btn-blue-30"><h1>Get started</h1></button>
+            <button class="btn-blue-29"><h1>Get started</h1></button>
+            <button class="btn-blue-28"><h1>Get started</h1></button>
+            <button class="btn-blue-27"><h1>Get started</h1></button>
+            <button class="btn-blue-26"><h1>Get started</h1></button>
+            <button class="btn-blue-25"><h1>Get started</h1></button>
+            <button class="btn-blue-24"><h1>Get started</h1></button>
+            <button class="btn-blue-23"><h1>Get started</h1></button>
+            <button class="btn-blue-22"><h1>Get started</h1></button>
+            <button class="btn-blue-21"><h1>Get started</h1></button>
+            <button class="btn-blue-20"><h1>Get started</h1></button>
+            <button class="btn-blue-19"><h1>Get started</h1></button>
+            <button class="btn-blue-18"><h1>Get started</h1></button>
+            <button class="btn-blue-17"><h1>Get started</h1></button>
+            <button class="btn-blue-16"><h1>Get started</h1></button>
+            <button class="btn-blue-15"><h1>Get started</h1></button>
+            <button class="btn-blue-14"><h1>Get started</h1></button>
+            <button class="btn-blue-13"><h1>Get started</h1></button>
+            <button class="btn-blue-12"><h1>Get started</h1></button>
+            <button class="btn-blue-11"><h1>Get started</h1></button>
+            <button class="btn-blue-10"><h1>Get started</h1></button>
+            
+        </div>
+        <h1 class="color-names">pink</h1>
+        <div class="box-buttons">
+            <button class="btn-blue-violet-36"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-35"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-34"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-33"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-32"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-31"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-30"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-29"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-28"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-27"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-26"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-25"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-24"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-23"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-22"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-21"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-20"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-19"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-18"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-17"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-16"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-15"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-14"><h1>Get started</h1></button>
+            <button class="btn-blue-violet-13"><h1>Get started</h1></button>
+        </div>
+        <h1 class="color-names">purple</h1>
+        <div class="box-buttons">
+            <button class="btn-violet-36"><h1>Get started</h1></button>
+            <button class="btn-violet-35"><h1>Get started</h1></button>
+            <button class="btn-violet-35"><h1>Get started</h1></button>
+            <button class="btn-violet-34"><h1>Get started</h1></button>
+            <button class="btn-violet-33"><h1>Get started</h1></button>
+            <button class="btn-violet-32"><h1>Get started</h1></button>
+            <button class="btn-violet-31"><h1>Get started</h1></button>
+            <button class="btn-violet-30"><h1>Get started</h1></button>
+            <button class="btn-violet-29"><h1>Get started</h1></button>
+            <button class="btn-violet-28"><h1>Get started</h1></button>
+            <button class="btn-violet-27"><h1>Get started</h1></button>
+            <button class="btn-violet-26"><h1>Get started</h1></button>
+            <button class="btn-violet-25"><h1>Get started</h1></button>
+            <button class="btn-violet-24"><h1>Get started</h1></button>
+            <button class="btn-violet-23"><h1>Get started</h1></button>
+            <button class="btn-violet-22"><h1>Get started</h1></button>
+            <button class="btn-violet-21"><h1>Get started</h1></button>
+            <button class="btn-violet-20"><h1>Get started</h1></button>
+            <button class="btn-violet-19"><h1>Get started</h1></button>
+            <button class="btn-violet-18"><h1>Get started</h1></button>
+            <button class="btn-violet-17"><h1>Get started</h1></button>
+            <button class="btn-violet-16"><h1>Get started</h1></button>
+            <button class="btn-violet-15"><h1>Get started</h1></button>
+            <button class="btn-violet-14"><h1>Get started</h1></button>
+            
+        </div>
+
+        <h1 class="color-names">purple-red</h1>
+        <div class="box-buttons">
+            <button class="btn-red-violet-36"><h1>Get started</h1></button>
+            <button class="btn-red-violet-35"><h1>Get started</h1></button>
+            <button class="btn-red-violet-34"><h1>Get started</h1></button>
+            <button class="btn-red-violet-33"><h1>Get started</h1></button>
+            <button class="btn-red-violet-32"><h1>Get started</h1></button>
+            <button class="btn-red-violet-31"><h1>Get started</h1></button>
+            <button class="btn-red-violet-30"><h1>Get started</h1></button>
+            <button class="btn-red-violet-29"><h1>Get started</h1></button>
+            <button class="btn-red-violet-28"><h1>Get started</h1></button>
+            <button class="btn-red-violet-27"><h1>Get started</h1></button>
+            <button class="btn-red-violet-26"><h1>Get started</h1></button>
+            <button class="btn-red-violet-25"><h1>Get started</h1></button>
+            <button class="btn-red-violet-24"><h1>Get started</h1></button>
+            <button class="btn-red-violet-23"><h1>Get started</h1></button>
+            <button class="btn-red-violet-22"><h1>Get started</h1></button>
+            <button class="btn-red-violet-21"><h1>Get started</h1></button>
+            <button class="btn-red-violet-20"><h1>Get started</h1></button>
+            <button class="btn-red-violet-19"><h1>Get started</h1></button>
+            <button class="btn-red-violet-18"><h1>Get started</h1></button>
+            <button class="btn-red-violet-17"><h1>Get started</h1></button>
+            <button class="btn-red-violet-16"><h1>Get started</h1></button>
+            <button class="btn-red-violet-15"><h1>Get started</h1></button>
+            <button class="btn-red-violet-14"><h1>Get started</h1></button>
+            <button class="btn-red-violet-13"><h1>Get started</h1></button>
+        </div>
+        <h1 class="color-names">red</h1>
+        <div class="box-buttons">
+            <button class="btn-red-36"><h1>Get started</h1></button>
+            <button class="btn-red-35"><h1>Get started</h1></button>
+            <button class="btn-red-35"><h1>Get started</h1></button>
+            <button class="btn-red-34"><h1>Get started</h1></button>
+            <button class="btn-red-33"><h1>Get started</h1></button>
+            <button class="btn-red-32"><h1>Get started</h1></button>
+            <button class="btn-red-31"><h1>Get started</h1></button>
+            <button class="btn-red-30"><h1>Get started</h1></button>
+            <button class="btn-red-29"><h1>Get started</h1></button>
+            <button class="btn-red-28"><h1>Get started</h1></button>
+            <button class="btn-red-27"><h1>Get started</h1></button>
+            <button class="btn-red-26"><h1>Get started</h1></button>
+            <button class="btn-red-25"><h1>Get started</h1></button>
+            <button class="btn-red-24"><h1>Get started</h1></button>
+            <button class="btn-red-23"><h1>Get started</h1></button>
+            <button class="btn-red-22"><h1>Get started</h1></button>
+            <button class="btn-red-21"><h1>Get started</h1></button>
+            <button class="btn-red-20"><h1>Get started</h1></button>
+            <button class="btn-red-19"><h1>Get started</h1></button>
+            <button class="btn-red-18"><h1>Get started</h1></button>
+            <button class="btn-red-17"><h1>Get started</h1></button>
+            <button class="btn-red-16"><h1>Get started</h1></button>
+            <button class="btn-red-15"><h1>Get started</h1></button>
+            <button class="btn-red-14"><h1>Get started</h1></button>
+            
+        </div>
+        <h1 class="color-names">orange</h1>
+        <div class="box-buttons">
+          
+            <button class="btn-orange-36"><h1>Get started</h1></button>
+            <button class="btn-orange-35"><h1>Get started</h1></button>
+            <button class="btn-orange-34"><h1>Get started</h1></button>
+            <button class="btn-orange-33"><h1>Get started</h1></button>
+            <button class="btn-orange-32"><h1>Get started</h1></button>
+            <button class="btn-orange-31"><h1>Get started</h1></button>
+            <button class="btn-orange-30"><h1>Get started</h1></button>
+            <button class="btn-orange-29"><h1>Get started</h1></button>
+            <button class="btn-orange-28"><h1>Get started</h1></button>
+            <button class="btn-orange-27"><h1>Get started</h1></button>
+            <button class="btn-orange-26"><h1>Get started</h1></button>
+            <button class="btn-orange-25"><h1>Get started</h1></button>
+            <button class="btn-orange-24"><h1>Get started</h1></button>
+            <button class="btn-orange-23"><h1>Get started</h1></button>
+            <button class="btn-orange-22"><h1>Get started</h1></button>
+            <button class="btn-orange-21"><h1>Get started</h1></button>
+            <button class="btn-orange-20"><h1>Get started</h1></button>
+            <button class="btn-orange-19"><h1>Get started</h1></button>
+            <button class="btn-orange-18"><h1>Get started</h1></button>
+            <button class="btn-orange-17"><h1>Get started</h1></button>
+            <button class="btn-orange-16"><h1>Get started</h1></button>
+            <button class="btn-orange-15"><h1>Get started</h1></button>
+            <button class="btn-orange-14"><h1>Get started</h1></button>
+            <button class="btn-orange-13"><h1>Get started</h1></button>
+        </div>
+        <h1 class="color-names">yellow</h1>
+        <div class="box-buttons">
+            <button class="btn-yellow-36"><h1>Get started</h1></button>
+            <button class="btn-yellow-35"><h1>Get started</h1></button>
+            <button class="btn-yellow-35"><h1>Get started</h1></button>
+            <button class="btn-yellow-34"><h1>Get started</h1></button>
+            <button class="btn-yellow-33"><h1>Get started</h1></button>
+            <button class="btn-yellow-32"><h1>Get started</h1></button>
+            <button class="btn-yellow-31"><h1>Get started</h1></button>
+            <button class="btn-yellow-30"><h1>Get started</h1></button>
+            <button class="btn-yellow-29"><h1>Get started</h1></button>
+            <button class="btn-yellow-28"><h1>Get started</h1></button>
+            <button class="btn-yellow-27"><h1>Get started</h1></button>
+            <button class="btn-yellow-26"><h1>Get started</h1></button>
+            <button class="btn-yellow-25"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-24"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-23"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-22"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-21"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-20"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-19"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-18"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-17"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-16"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-15"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-yellow-14"><h1 style="color: black;">Get started</h1></button>
+            
+        </div>
+        <h1 class="color-names">green</h1>
+        <div class="box-buttons">
+          
+            <button class="btn-green-36"><h1>Get started</h1></button>
+            <button class="btn-green-35"><h1>Get started</h1></button>
+            <button class="btn-green-34"><h1>Get started</h1></button>
+            <button class="btn-green-33"><h1>Get started</h1></button>
+            <button class="btn-green-32"><h1>Get started</h1></button>
+            <button class="btn-green-31"><h1>Get started</h1></button>
+            <button class="btn-green-30"><h1>Get started</h1></button>
+            <button class="btn-green-29"><h1>Get started</h1></button>
+            <button class="btn-green-28"><h1>Get started</h1></button>
+            <button class="btn-green-27"><h1>Get started</h1></button>
+            <button class="btn-green-26"><h1>Get started</h1></button>
+            <button class="btn-green-25"><h1>Get started</h1></button>
+            <button class="btn-green-24"><h1>Get started</h1></button>
+            <button class="btn-green-23"><h1>Get started</h1></button>
+            <button class="btn-green-22"><h1>Get started</h1></button>
+            <button class="btn-green-21"><h1>Get started</h1></button>
+            <button class="btn-green-20"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-19"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-18"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-17"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-16"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-15"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-14"><h1 style="color: black;">Get started</h1></button>
+            <button class="btn-green-13"><h1 style="color: black;">Get started</h1></button>
+        </div>
+
+       
+    
+
+    </div>
+
+<script>
+        // Function to set the text color of the button text to match the button's background color
+        function setButtonTextColor() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+                const h1 = button.querySelector("h1.button-text");
+                if (h1) {
+                    const bgColor = window.getComputedStyle(button).backgroundColor;
+                    h1.style.color = bgColor;
+                }
+            });
+        }
+
+        // Call the function to set the text color
+        setButtonTextColor();
+
+        // Function to copy button styles to clipboard and display in output box
+        function copyStyles(button) {
+            const styles = window.getComputedStyle(button);
+
+            // Extract the required styles
+            const width = styles.width;
+            const height = styles.height;
+            const border = styles.border;
+            const borderRadius = styles.borderRadius;
+            const backgroundColor = styles.backgroundColor;
+
+            // Create a string with the styles
+            const styleString = `.button-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${backgroundColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n font-size: 17px;\n font-family: sans-serif; }`;
+
+            // Create the HTML example
+            const htmlString = `<button class="button-copy">Get started</button>`;
+
+            // Display the styles and HTML in the output box
+            document.getElementById("output-styles").textContent = styleString;
+            document.getElementById("output-html").textContent = htmlString;
+
+            // Copy the styles to the clipboard
+            navigator.clipboard.writeText(styleString)
+                .then(() => {
+                })
+                .catch((err) => {
+                    console.error("Failed to copy styles: ", err);
+                });
+        }
+
+        // Add click event listeners to all buttons
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                copyStyles(button);
+            });
+        });
+    </script>
+       <script>
+        // Function to convert RGB color to HEX
+        function rgbToHex(rgb) {
+            // Extract the RGB values from the string
+            const rgbValues = rgb.match(/\d+/g);
+            if (!rgbValues) return "#000000"; // Default to black if no match
+
+            // Convert each RGB value to HEX
+            const hex = rgbValues
+                .map(value => {
+                    const hexValue = parseInt(value).toString(16);
+                    return hexValue.length === 1 ? "0" + hexValue : hexValue;
+                })
+                .join("");
+
+            return `#${hex}`;
+        }
+
+        // Function to set the text of <h1> to the button's background color code
+        function setButtonTextToColorCode() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+                const h1 = button.querySelector("h1");
+                if (h1) {
+                    // Get the computed background color of the button
+                    const bgColor = window.getComputedStyle(button).backgroundColor;
+
+                    // Convert RGB to HEX (if necessary)
+                    const hexColor = rgbToHex(bgColor);
+
+                    // Set the text of <h1> to the HEX color code
+                    h1.textContent = hexColor;
+                }
+            });
+        }
+
+        // Call the function to set the text to the color code
+        setButtonTextToColorCode();
+    </script>
+</body>
+
+</html>

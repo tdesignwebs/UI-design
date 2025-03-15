@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../css/color.css">
+    <style>
+        
+          
+
+    /* General button styles for ALL buttons */
+        body {
+            background-color: #CCD7E4;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .main-box-for-buttons {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;  
+
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 764px;
+            justify-content: center;
+            height: fit-content;
+        }
+
+     
+    /* General div styles for ALL divs */
+.boxes {
+    width: 150px;
+    height: 150px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin: 10px;
+    outline: none;
+    transform: translateZ(0); /* Enable hardware acceleration */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+        /* Blue buttons (nicer colors) */
+      
+     
+        /* Output box */
+        .output-box {
+            width: 80%;
+            max-width: 764px;
+            min-height: 300px;
+            height: fit-content;
+            background-color: #1e1e2f;
+            border: 2px solid #444;
+            margin-bottom:20px;
+            padding: 20px;
+            border-radius: 20px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .output-box pre {
+            margin: 0;
+            width: fit-content;
+            height: f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box-for-buttons">
+
+        <div class="output-box">
+            <pre id="output-styles"></pre>
+            <br>
+            <br>
+            <br>
+            <pre id="output-html"></pre>
+        </div>
+        <!-- Blue Buttons -->
+        <div class="box-buttons">
+            <div class="boxes btn-white-1" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-2" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-3" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-4" style="color: black;"><h1>Get started</h1></div>
+            <div class="boxes btn-white-5"><h1>Get started</h1></div>
+            <div class="boxes btn-white-6"><h1>Get started</h1></div>
+            <div class="boxes btn-white-7"><h1>Get started</h1></div>
+            <div class="boxes btn-white-8"><h1>Get started</h1></div>
+            <div class="boxes btn-white-9"><h1>Get started</h1></div>
+            <div class="boxes btn-white-10"><h1>Get started</h1></div>
+        </div>
+        <div class="box-buttons">
+            <div class="boxes btn-blue-36"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-35"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-35"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-34"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-33"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-32"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-31"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-30"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-29"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-28"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-27"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-26"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-25"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-24"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-23"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-22"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-21"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-20"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-19"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-18"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-17"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-16"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-15"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-14"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-13"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-12"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-11"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-10"><h1>Get started</h1></div>
+            
+        </div>
+        <div class="box-buttons">
+          
+            <div class="boxes btn-blue-violet-13"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-14"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-15"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-16"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-17"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-18"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-19"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-20"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-21"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-22"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-23"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-24"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-25"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-26"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-27"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-28"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-29"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-30"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-31"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-32"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-33"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-34"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-35"><h1>Get started</h1></div>
+            <div class="boxes btn-blue-violet-36"><h1>Get started</h1></div>
+        </div>
+        <div class="box-buttons">
+            <div class="boxes btn-violet-36"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-35"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-35"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-34"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-33"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-32"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-31"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-30"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-29"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-28"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-27"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-26"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-25"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-24"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-23"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-22"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-21"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-20"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-19"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-18"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-17"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-16"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-15"><h1>Get started</h1></div>
+            <div class="boxes btn-violet-14"><h1>Get started</h1></div>
+            
+        </div>
+        <div class="box-buttons">
+          
+            <div class="boxes btn-red-violet-13"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-14"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-15"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-16"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-17"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-18"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-19"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-20"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-21"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-22"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-23"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-24"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-25"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-26"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-27"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-28"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-29"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-30"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-31"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-32"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-33"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-34"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-35"><h1>Get started</h1></div>
+            <div class="boxes btn-red-violet-36"><h1>Get started</h1></div>
+        </div>
+        <div class="box-buttons">
+            <div class="boxes btn-red-36"><h1>Get started</h1></div>
+            <div class="boxes btn-red-35"><h1>Get started</h1></div>
+            <div class="boxes btn-red-35"><h1>Get started</h1></div>
+            <div class="boxes btn-red-34"><h1>Get started</h1></div>
+            <div class="boxes btn-red-33"><h1>Get started</h1></div>
+            <div class="boxes btn-red-32"><h1>Get started</h1></div>
+            <div class="boxes btn-red-31"><h1>Get started</h1></div>
+            <div class="boxes btn-red-30"><h1>Get started</h1></div>
+            <div class="boxes btn-red-29"><h1>Get started</h1></div>
+            <div class="boxes btn-red-28"><h1>Get started</h1></div>
+            <div class="boxes btn-red-27"><h1>Get started</h1></div>
+            <div class="boxes btn-red-26"><h1>Get started</h1></div>
+            <div class="boxes btn-red-25"><h1>Get started</h1></div>
+            <div class="boxes btn-red-24"><h1>Get started</h1></div>
+            <div class="boxes btn-red-23"><h1>Get started</h1></div>
+            <div class="boxes btn-red-22"><h1>Get started</h1></div>
+            <div class="boxes btn-red-21"><h1>Get started</h1></div>
+            <div class="boxes btn-red-20"><h1>Get started</h1></div>
+            <div class="boxes btn-red-19"><h1>Get started</h1></div>
+            <div class="boxes btn-red-18"><h1>Get started</h1></div>
+            <div class="boxes btn-red-17"><h1>Get started</h1></div>
+            <div class="boxes btn-red-16"><h1>Get started</h1></div>
+            <div class="boxes btn-red-15"><h1>Get started</h1></div>
+            <div class="boxes btn-red-14"><h1>Get started</h1></div>
+            
+        </div>
+        <div class="box-buttons">
+          
+            <div class="boxes btn-orange-13"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-14"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-15"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-16"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-17"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-18"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-19"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-20"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-21"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-22"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-23"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-24"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-25"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-26"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-27"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-28"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-29"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-30"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-31"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-32"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-33"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-34"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-35"><h1>Get started</h1></div>
+            <div class="boxes btn-orange-36"><h1>Get started</h1></div>
+        </div>
+        <div class="box-buttons">
+            <div class="boxes btn-yellow-36"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-35"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-35"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-34"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-33"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-32"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-31"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-30"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-29"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-28"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-27"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-26"><h1>Get started</h1></div>
+            <div class="boxes btn-yellow-25"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-24"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-23"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-22"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-21"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-20"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-19"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-18"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-17"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-16"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-15"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-yellow-14"><h1 style="color: black;">Get started</h1></div>
+            
+        </div>
+        <div class="box-buttons">
+          
+            <div class="boxes btn-green-13"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-14"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-15"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-16"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-17"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-18"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-19"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-20"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-21"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-22"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-23"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-24"><h1 style="color: black;">Get started</h1></div>
+            <div class="boxes btn-green-25"><h1>Get started</h1></div>
+            <div class="boxes btn-green-26"><h1>Get started</h1></div>
+            <div class="boxes btn-green-27"><h1>Get started</h1></div>
+            <div class="boxes btn-green-28"><h1>Get started</h1></div>
+            <div class="boxes btn-green-29"><h1>Get started</h1></div>
+            <div class="boxes btn-green-30"><h1>Get started</h1></div>
+            <div class="boxes btn-green-31"><h1>Get started</h1></div>
+            <div class="boxes btn-green-32"><h1>Get started</h1></div>
+            <div class="boxes btn-green-33"><h1>Get started</h1></div>
+            <div class="boxes btn-green-34"><h1>Get started</h1></div>
+            <div class="boxes btn-green-35"><h1>Get started</h1></div>
+            <div class="boxes btn-green-36"><h1>Get started</h1></div>
+            <div class="boxes btn-green-37"><h1>Get started</h1></div>
+            <div class="boxes btn-green-38"><h1>Get started</h1></div>
+            <div class="boxes btn-green-39"><h1>Get started</h1></div>
+            <div class="boxes btn-green-40"><h1>Get started</h1></div>
+        </div>
+
+       
+    
+      
+    </div>
+
+
+    <script>
+        // Function to convert RGB color to HEX
+        function rgbToHex(rgb) {
+            const rgbValues = rgb.match(/\d+/g);
+            if (!rgbValues) return "#000000"; // Default to black if no match
+
+            const hex = rgbValues
+                .map(value => {
+                    const hexValue = parseInt(value).toString(16);
+                    return hexValue.length === 1 ? "0" + hexValue : hexValue;
+                })
+                .join("");
+
+            return `#${hex}`;
+        }
+
+        // Function to set the text of <h1> to the div's background color code
+        function setDivTextToColorCode() {
+            const divs = document.querySelectorAll(".boxes");
+            divs.forEach((div) => {
+                const h1 = div.querySelector("h1");
+                if (h1) {
+                    const bgColor = window.getComputedStyle(div).backgroundColor;
+                    const hexColor = rgbToHex(bgColor);
+                    h1.textContent = hexColor;
+                }
+            });
+        }
+
+        // Function to display the clicked box's background color in the output box
+        function displayColorInOutput(div) {
+            const bgColor = window.getComputedStyle(div).backgroundColor;
+            const hexColor = rgbToHex(bgColor);
+            const styles = window.getComputedStyle(div);
+
+            const width = styles.width;
+    const height = styles.height;
+    const border = styles.border;
+    const borderRadius = styles.borderRadius;
+    const backgroundColor = styles.backgroundColor;
+
+    // Create a string with the styles
+    const styleString = `.div-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${hexColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  }`;
+   const htmlString = `<div class="div-copy">${hexColor}</div>`;
+
+            document.getElementById("output-styles").textContent = styleString;
+            document.getElementById("output-html").textContent = htmlString;
+        }
+
+        // Add click event listeners to all divs
+        const divs = document.querySelectorAll(".boxes");
+        divs.forEach((div) => {
+            div.addEventListener("click", () => {
+                displayColorInOutput(div);
+            });
+        });
+
+        // Call the function to set the text to the color code
+        setDivTextToColorCode();
+    </script>
+</body>
+
+</html>
