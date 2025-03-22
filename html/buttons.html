@@ -8,6 +8,915 @@
   <title>Button Code Viewer</title>
   <link rel="stylesheet" href="../css/button-hover.css">
   <style>
+    /* From Uiverse.io by zjssun */ 
+.button-1 {
+    position: relative;
+    border-radius: 6px;
+    width: 136px;
+    height: 56px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+       background: #4169e1;
+    transition: all 0.2s ease;
+  }
+  
+  .button-1:active {
+    transform: scale(0.96);
+  }
+  
+  .button-1:before,
+  .button-1:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button-1:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #4169e1 20%, transparent 30%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #4169e1 15%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button-1:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #4169e1 15%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%),
+      radial-gradient(circle, #4169e1 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+
+  
+
+  .button-2 {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background: #4169e1;
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s;
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+        color: #4169e1;
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button-2:hover {
+    background-color: #000;
+  }
+  
+  .button-2:hover .button__icon-wrapper {
+    color: #000;
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button-2:hover .button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button-2:hover .button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+
+  
+
+
+  /* From Uiverse.io by vinodjangid07 */ 
+.setting-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #4169e1;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .bar {
+    width: 50%;
+    height: 2px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+  }
+  .bar::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    background: royalblue;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.3s;
+  }
+  .bar1::before {
+    transform: translateX(-4px);
+  }
+  .bar2::before {
+    transform: translateX(4px);
+  }
+  .setting-btn:hover .bar1::before {
+    transform: translateX(4px);
+  }
+  .setting-btn:hover .bar2::before {
+    transform: translateX(-4px);
+  }
+  
+
+
+  .button-3 {
+    font-size: 17px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: royalblue;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+  }
+  
+
+  
+  .label {
+    position: relative;
+    top: -1px;
+  }
+  
+  .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background: rgb(0, 0, 0);
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button-3:hover .transition {
+    width: 14em;
+    height: 14em;
+  }
+  
+  .button-3:active {
+    transform: scale(0.97);
+  }
+  
+
+
+
+
+
+  /* From Uiverse.io by Mhyar-nsi */ 
+.button-4 {
+  background: royalblue;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+  }
+  
+  .button-4:hover {
+    background-color: #3b82f6;
+    color: #fff;
+  }
+  
+
+
+
+
+  .button-5 {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ font-family: inherit;
+ font-size: 13px;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 0.4px;
+ color: #ffffff;
+ background: royalblue;
+ border-style: solid;
+ border-width: 2px 2px 2px 2px;
+ border-color: rgba(255, 255, 255, 0.333);
+ border-radius: 40px 40px 40px 40px;
+ padding: 16px 24px 16px 28px;
+ transform: translate(0px, 0px) rotate(0deg);
+ transition: 0.2s;
+}
+
+.button-5:hover {
+ color: #ffffff;
+ background: rgb(38, 77, 195);
+}
+
+.button-5:active {
+
+  transform: scale(0.95);
+
+}
+
+
+
+.button-6 {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button-6 span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-6 svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-6:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button-6:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button-6:hover span {
+  transform: translateX(5em);
+}
+
+.button-6:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
+
+
+
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid royalblue;
+  border-radius: 9999px;
+  background-color: royalblue;
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all  .2s ease;
+  text-decoration: none;
+}
+.playstore-button:active{
+  transform: scale(0.95);
+}
+.playstore-button:hover {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
+}
+
+
+
+/* From Uiverse.io by abrahamcalsin */ 
+.button-7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: royalblue;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.button-7:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  position: absolute;
+
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.button-7:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.button-7 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: white;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-7:hover span {
+  color: white;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-7:active{
+  transform: scale(0.95);
+}
+
+
+
+.button-8 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: royalblue;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  border: none;
+}
+
+.button-8:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: auto;
+  left: auto;
+}
+
+.button-8:hover::after {
+  right: auto;
+  left: auto;
+  width: 100%;
+}
+
+.button-8 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-8:hover span {
+  color: #fff;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* From Uiverse.io by sina-parsania */ 
+.button-9 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: royalblue;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.button-9:after {
+  content: " ";
+  width: 100%;
+  height: 0%;
+  background: #000;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  bottom: 0;
+  border-radius: 0%;
+  transform: scale(1);
+  transition-duration: 0.4s, 0.2s, 0.2s, 0.4s;
+}
+
+.button-9:hover::after {
+  bottom: auto;
+  top: 0;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+
+.button-9 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-9:hover span {
+  color: #fff;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+.button-10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 36px;
+  width: 120px;
+  border: none;
+  background-color: royalblue;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.button-10:hover {
+  background-color: rgb(35, 79, 210);
+}
+
+.button-10:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* From uiverse.io by @Ali-Tahmazi99 */
+.button-11 {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid royalblue;
+  position: relative;
+  overflow: hidden;
+  background-color: royalblue;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ .button-11::before,
+ .button-11::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ .button-11::before {
+  left: -10px;
+  background: rgb(35, 72, 180)
+ }
+ 
+ .button-11::after {
+  right: -10px;
+  background: rgb(18, 54, 162);
+ }
+ 
+ .button-11:hover::before,
+ .button-11:hover::after {
+  width: 58%;
+ }
+ 
+ .button-11:hover span {
+  color: #ffffff;
+  transition: 0.3s;
+ }
+ 
+ .button-11 span {
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+
+
+
+
+ .pay-btn {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.pay-btn:active{
+  transform: scale(0.97);
+}
+
+
+.icon-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.default-icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover animations */
+.pay-btn:hover .icon {
+  animation: none;
+}
+
+.pay-btn:hover .wallet-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pay-btn:hover .card-icon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 0s;
+}
+
+.pay-btn:hover .payment-icon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 0.5s;
+}
+
+.pay-btn:hover .dollar-icon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 1s;
+}
+
+.pay-btn:hover .check-icon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 1.5s;
+}
+
+/* Active state - show only checkmark */
+.pay-btn:active .icon {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.pay-btn:active .check-icon {
+  animation: checkmarkAppear 0.6s ease forwards;
+  visibility: visible;
+}
+
+.btn-text {
+  font-weight: 600;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+@keyframes iconRotate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.5);
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  15% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.5);
+  }
+}
+
+@keyframes checkmarkAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+
+.button-12 {
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.05);
+  background-color: #fff;
+  padding: 0;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+}
+
+.button-decor {
+  position: absolute;
+  inset: 0;
+  background-color: royalblue;
+  transform: translateX(-100%);
+  transition: transform .3s;
+  z-index: 0;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.button__icon {
+  width: 48px;
+  height: 40px;
+  background-color: royalblue;
+  display: grid;
+  place-items: center;
+}
+
+.button__text {
+  display: inline-block;
+  transition: color .2s;
+  padding: 2px 1.5rem 2px;
+  padding-left: .75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.button-12:hover .button__text {
+  color: #fff;
+}
+
+.button-12:hover .button-decor {
+  transform: translate(0);
+}
     body {
       background-color: #CCD7E4;
       margin: 0;
