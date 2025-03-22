@@ -2,511 +2,838 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/color.css">
-    <link rel="stylesheet" href="../css/button-hover.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Code Viewer</title>
+  <link rel="stylesheet" href="../css/button-hover.css">
+  <style>
+    body {
+      background-color: #CCD7E4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
 
-    <style>
-        /* General button styles for ALL buttons */
-        body {
-            background-color: #CCD7E4;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
+    .main-box-for-buttons {
+      width: 50%;
+      height: 100vh;
+      flex-wrap: wrap;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        .main-box-for-buttons {
-            width: 100%;
-            height: fit-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+    .box-1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 10px;
+      height: fit-content;
+      flex-wrap: wrap;
+    }
 
-        .box-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            margin-bottom: 100px;
-            max-width: 764px;
-            align-items: center;
-            justify-content: center;
-            height: fit-content;
-        }
+    .box-buttons {
+      width: 250px;
+      height: 200px;
+      display: flex;
+      background-color: #222;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
 
-        button {
-            width: 150px;
-            height: 50px;
-            font-size: 18px;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            margin: 10px;
-            outline: none;
-            transform: translateZ(0); /* Enable hardware acceleration */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
+    .box-buttons:hover {
+      transform: scale(1.05);
+    }
 
-        button h1 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .code-display {
+      width: 50%;
+      height: 100vh;
+      background-color: #CCD7E4;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      color: #f4f4f4;
+    }
 
-        /* Default hover effect for ALL buttons */
-        button:hover {
-            transform: scale(1.05); /* Slightly scale up on hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-        }
+    .code-box {
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      position: relative;
+    }
 
-        /* Blue buttons (nicer colors) */
-      
-     
-      /* Output box */
-      .output-box {
-            width: 80%;
-            max-width: 764px;
-            min-height: 300px;
-            height: fit-content;
-            background-color: #1e1e2f;
-            border: 2px solid #444;
-            padding: 20px;
-            border-radius: 20px;
-            overflow-y: auto;
-            margin-bottom:20px;
-            font-family: monospace;
-            font-size: 14px;
-            color: #ccc;
-        }
+    .code-box h3 {
+      margin-top: 0;
+      color: #f4f4f4;
+      font-size: 18px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
+    }
 
-        .output-box pre {
-            margin: 0;
-            width: fit-content;
-            height: f;
-        }
+    .code-box pre {
+      margin: 0;
+      overflow-x: auto;
+    }
 
+    .code-box code {
+      color: #d4d4d4;
+    }
 
-       .color-names{
-        color: black;
-        font-size: 2rem;
-        font-weight: bold;
-        font-family: sans-serif;
-       }
+    .html-code {
+      color: #569cd6;
+      /* Blue for HTML tags */
+    }
 
-       
-       
+    .css-code {
+      color: #ce9178;
+      /* Orange for CSS properties */
+    }
 
-    </style>
+    .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #444;
+      border: none;
+      color: #f4f4f4;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .copy-button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="main-box-for-buttons">
-        <!-- Blue Buttons -->
+  <div class="main-box-for-buttons">
+    <div class="box-1">
+      <!-- Button 1 -->
+      <div class="box-buttons" style="background-color: transparent;">
+        <button class="button-1" onclick="showCode('button-1')">
+          Button
+        </button>
+      </div>
 
-       <h1 class="color-names">hover ones</h1>
-        <div class="box-buttons">
-           <button class="btn-linear-1"> hover </button>
-           <button class="btn-linear-2"> hover </button>
-           <button class="btn-linear-3"> hover </button>
-           <button class="btn-linear-4"> hover </button>
-           <button class="btn-linear-5"> hover </button>
-           <button class="btn-linear-6"> hover </button>
-           <button class="btn-linear-7"> hover </button>
-           <button class="btn-linear-8"> hover </button>
-           <button class="btn-linear-9"> hover </button>
-           <button class="btn-linear-10"> hover </button>
-           <button class="btn-linear-11"> hover </button>
-           <button class="btn-linear-12"> hover </button>
-           <button class="btn-linear-13"> hover </button>
-           <button class="btn-linear-14"> hover </button>
-           <button class="btn-linear-15"> hover </button>
-           <button class="btn-linear-16"> hover </button>
-           <button class="btn-linear-17"> hover </button>
-           <button class="btn-linear-18"> hover </button>
-           <button class="btn-linear-19"> hover </button>
-           <button class="btn-linear-20"> hover </button>
-           <button class="btn-linear-21"> hover </button>
-           <button class="btn-linear-22"> hover </button>
-           <button class="btn-linear-23"> hover </button>
-           <button class="btn-linear-24"> hover </button>
-           <button class="btn-linear-25"> hover </button>
-           <button class="btn-linear-26"> hover </button>
-           <button class="btn-linear-27"> hover </button>
-           <button class="btn-linear-28"> hover </button>
-           <button class="btn-linear-29"> hover </button>
-           <button class="btn-linear-30"> hover </button>
-           <button class="btn-linear-31"> hover </button>
-           <button class="btn-linear-32"> hover </button>
-           <button class="btn-linear-33"> hover </button>
-           <button class="btn-linear-34"> hover </button>
-           <button class="btn-linear-35"> hover </button>
-           <button class="btn-linear-36"> hover </button>
-           <button class="btn-linear-37"> hover </button>
-           <button class="btn-linear-38"> hover </button>
-           <button class="btn-linear-39"> hover </button>
-           <button class="btn-linear-40"> hover </button>
-           <button class="btn-linear-41"> hover </button>
-           <button class="btn-linear-42"> hover </button>
-           <button class="btn-linear-43"> hover </button>
-           <button class="btn-linear-44"> hover </button>
-           <button class="btn-linear-45"> hover </button>
-           <button class="btn-linear-46"> hover </button>
-           <button class="btn-linear-47"> hover </button>
-           <button class="btn-linear-48"> hover </button>
-           <button class="btn-linear-49"> hover </button>
-           <button class="btn-linear-50"> hover </button>
-           
-        </div>
+      <!-- Button 2 -->
+      <div class="box-buttons">
+        <button href="#" class="button-2" style="--clr: #7808d0" onclick="showCode('button-2')">
+          <span class="button__icon-wrapper">
+            <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg" width="10">
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"></path>
+            </svg>
 
-        <h1 class="color-names">white-light-blue</h1>
-        <div class="box-buttons">
-            
-            <button class="boxes btn-white-12" ><h1>Get started</h1></button>
-            <button class="boxes btn-white-11" ><h1>Get started</h1></button>
-            <button class="boxes btn-white-10" ><h1>Get started</h1></button>
-            <button class="boxes btn-white-9" ><h1>Get started</h1></button>
-            <button class="boxes btn-white-8"><h1>Get started</h1></button>
-            <button class="boxes btn-white-7"><h1>Get started</h1></button>
-            <button class="boxes btn-white-6"><h1>Get started</h1></button>
-            <button class="boxes btn-white-5"><h1>Get started</h1></button>
-            <button class="boxes btn-white-4"><h1 style="color: black;">Get started</h1></button>
-            <button class="boxes btn-white-3"><h1 style="color: black;">Get started</h1></button>
-            <button class="boxes btn-white-2"><h1 style="color: black;">Get started</h1></button>
-            <button class="boxes btn-white-1"><h1 style="color: black;">Get started</h1></button>
-        </div>
-        <h1 class="color-names">blue</h1>
-        <div class="box-buttons">
-            <button class="btn-blue-36"><h1>Get started</h1></button>
-            <button class="btn-blue-35"><h1>Get started</h1></button>
-            <button class="btn-blue-35"><h1>Get started</h1></button>
-            <button class="btn-blue-34"><h1>Get started</h1></button>
-            <button class="btn-blue-33"><h1>Get started</h1></button>
-            <button class="btn-blue-32"><h1>Get started</h1></button>
-            <button class="btn-blue-31"><h1>Get started</h1></button>
-            <button class="btn-blue-30"><h1>Get started</h1></button>
-            <button class="btn-blue-29"><h1>Get started</h1></button>
-            <button class="btn-blue-28"><h1>Get started</h1></button>
-            <button class="btn-blue-27"><h1>Get started</h1></button>
-            <button class="btn-blue-26"><h1>Get started</h1></button>
-            <button class="btn-blue-25"><h1>Get started</h1></button>
-            <button class="btn-blue-24"><h1>Get started</h1></button>
-            <button class="btn-blue-23"><h1>Get started</h1></button>
-            <button class="btn-blue-22"><h1>Get started</h1></button>
-            <button class="btn-blue-21"><h1>Get started</h1></button>
-            <button class="btn-blue-20"><h1>Get started</h1></button>
-            <button class="btn-blue-19"><h1>Get started</h1></button>
-            <button class="btn-blue-18"><h1>Get started</h1></button>
-            <button class="btn-blue-17"><h1>Get started</h1></button>
-            <button class="btn-blue-16"><h1>Get started</h1></button>
-            <button class="btn-blue-15"><h1>Get started</h1></button>
-            <button class="btn-blue-14"><h1>Get started</h1></button>
-            <button class="btn-blue-13"><h1>Get started</h1></button>
-            <button class="btn-blue-12"><h1>Get started</h1></button>
-            <button class="btn-blue-11"><h1>Get started</h1></button>
-            <button class="btn-blue-10"><h1>Get started</h1></button>
-            
-        </div>
-        <h1 class="color-names">pink</h1>
-        <div class="box-buttons">
-            <button class="btn-blue-violet-36"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-35"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-34"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-33"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-32"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-31"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-30"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-29"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-28"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-27"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-26"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-25"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-24"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-23"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-22"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-21"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-20"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-19"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-18"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-17"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-16"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-15"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-14"><h1>Get started</h1></button>
-            <button class="btn-blue-violet-13"><h1>Get started</h1></button>
-        </div>
-        <h1 class="color-names">purple</h1>
-        <div class="box-buttons">
-            <button class="btn-violet-36"><h1>Get started</h1></button>
-            <button class="btn-violet-35"><h1>Get started</h1></button>
-            <button class="btn-violet-35"><h1>Get started</h1></button>
-            <button class="btn-violet-34"><h1>Get started</h1></button>
-            <button class="btn-violet-33"><h1>Get started</h1></button>
-            <button class="btn-violet-32"><h1>Get started</h1></button>
-            <button class="btn-violet-31"><h1>Get started</h1></button>
-            <button class="btn-violet-30"><h1>Get started</h1></button>
-            <button class="btn-violet-29"><h1>Get started</h1></button>
-            <button class="btn-violet-28"><h1>Get started</h1></button>
-            <button class="btn-violet-27"><h1>Get started</h1></button>
-            <button class="btn-violet-26"><h1>Get started</h1></button>
-            <button class="btn-violet-25"><h1>Get started</h1></button>
-            <button class="btn-violet-24"><h1>Get started</h1></button>
-            <button class="btn-violet-23"><h1>Get started</h1></button>
-            <button class="btn-violet-22"><h1>Get started</h1></button>
-            <button class="btn-violet-21"><h1>Get started</h1></button>
-            <button class="btn-violet-20"><h1>Get started</h1></button>
-            <button class="btn-violet-19"><h1>Get started</h1></button>
-            <button class="btn-violet-18"><h1>Get started</h1></button>
-            <button class="btn-violet-17"><h1>Get started</h1></button>
-            <button class="btn-violet-16"><h1>Get started</h1></button>
-            <button class="btn-violet-15"><h1>Get started</h1></button>
-            <button class="btn-violet-14"><h1>Get started</h1></button>
-            
-        </div>
+            <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+              class="button__icon-svg button__icon-svg--copy">
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"></path>
+            </svg>
+          </span>
+          Explore All
+        </button>
+      </div>
 
-        <h1 class="color-names">purple-red</h1>
-        <div class="box-buttons">
-            <button class="btn-red-violet-36"><h1>Get started</h1></button>
-            <button class="btn-red-violet-35"><h1>Get started</h1></button>
-            <button class="btn-red-violet-34"><h1>Get started</h1></button>
-            <button class="btn-red-violet-33"><h1>Get started</h1></button>
-            <button class="btn-red-violet-32"><h1>Get started</h1></button>
-            <button class="btn-red-violet-31"><h1>Get started</h1></button>
-            <button class="btn-red-violet-30"><h1>Get started</h1></button>
-            <button class="btn-red-violet-29"><h1>Get started</h1></button>
-            <button class="btn-red-violet-28"><h1>Get started</h1></button>
-            <button class="btn-red-violet-27"><h1>Get started</h1></button>
-            <button class="btn-red-violet-26"><h1>Get started</h1></button>
-            <button class="btn-red-violet-25"><h1>Get started</h1></button>
-            <button class="btn-red-violet-24"><h1>Get started</h1></button>
-            <button class="btn-red-violet-23"><h1>Get started</h1></button>
-            <button class="btn-red-violet-22"><h1>Get started</h1></button>
-            <button class="btn-red-violet-21"><h1>Get started</h1></button>
-            <button class="btn-red-violet-20"><h1>Get started</h1></button>
-            <button class="btn-red-violet-19"><h1>Get started</h1></button>
-            <button class="btn-red-violet-18"><h1>Get started</h1></button>
-            <button class="btn-red-violet-17"><h1>Get started</h1></button>
-            <button class="btn-red-violet-16"><h1>Get started</h1></button>
-            <button class="btn-red-violet-15"><h1>Get started</h1></button>
-            <button class="btn-red-violet-14"><h1>Get started</h1></button>
-            <button class="btn-red-violet-13"><h1>Get started</h1></button>
-        </div>
-        <h1 class="color-names">red</h1>
-        <div class="box-buttons">
-            <button class="btn-red-36"><h1>Get started</h1></button>
-            <button class="btn-red-35"><h1>Get started</h1></button>
-            <button class="btn-red-35"><h1>Get started</h1></button>
-            <button class="btn-red-34"><h1>Get started</h1></button>
-            <button class="btn-red-33"><h1>Get started</h1></button>
-            <button class="btn-red-32"><h1>Get started</h1></button>
-            <button class="btn-red-31"><h1>Get started</h1></button>
-            <button class="btn-red-30"><h1>Get started</h1></button>
-            <button class="btn-red-29"><h1>Get started</h1></button>
-            <button class="btn-red-28"><h1>Get started</h1></button>
-            <button class="btn-red-27"><h1>Get started</h1></button>
-            <button class="btn-red-26"><h1>Get started</h1></button>
-            <button class="btn-red-25"><h1>Get started</h1></button>
-            <button class="btn-red-24"><h1>Get started</h1></button>
-            <button class="btn-red-23"><h1>Get started</h1></button>
-            <button class="btn-red-22"><h1>Get started</h1></button>
-            <button class="btn-red-21"><h1>Get started</h1></button>
-            <button class="btn-red-20"><h1>Get started</h1></button>
-            <button class="btn-red-19"><h1>Get started</h1></button>
-            <button class="btn-red-18"><h1>Get started</h1></button>
-            <button class="btn-red-17"><h1>Get started</h1></button>
-            <button class="btn-red-16"><h1>Get started</h1></button>
-            <button class="btn-red-15"><h1>Get started</h1></button>
-            <button class="btn-red-14"><h1>Get started</h1></button>
-            
-        </div>
-        <h1 class="color-names">orange</h1>
-        <div class="box-buttons">
-          
-            <button class="btn-orange-36"><h1>Get started</h1></button>
-            <button class="btn-orange-35"><h1>Get started</h1></button>
-            <button class="btn-orange-34"><h1>Get started</h1></button>
-            <button class="btn-orange-33"><h1>Get started</h1></button>
-            <button class="btn-orange-32"><h1>Get started</h1></button>
-            <button class="btn-orange-31"><h1>Get started</h1></button>
-            <button class="btn-orange-30"><h1>Get started</h1></button>
-            <button class="btn-orange-29"><h1>Get started</h1></button>
-            <button class="btn-orange-28"><h1>Get started</h1></button>
-            <button class="btn-orange-27"><h1>Get started</h1></button>
-            <button class="btn-orange-26"><h1>Get started</h1></button>
-            <button class="btn-orange-25"><h1>Get started</h1></button>
-            <button class="btn-orange-24"><h1>Get started</h1></button>
-            <button class="btn-orange-23"><h1>Get started</h1></button>
-            <button class="btn-orange-22"><h1>Get started</h1></button>
-            <button class="btn-orange-21"><h1>Get started</h1></button>
-            <button class="btn-orange-20"><h1>Get started</h1></button>
-            <button class="btn-orange-19"><h1>Get started</h1></button>
-            <button class="btn-orange-18"><h1>Get started</h1></button>
-            <button class="btn-orange-17"><h1>Get started</h1></button>
-            <button class="btn-orange-16"><h1>Get started</h1></button>
-            <button class="btn-orange-15"><h1>Get started</h1></button>
-            <button class="btn-orange-14"><h1>Get started</h1></button>
-            <button class="btn-orange-13"><h1>Get started</h1></button>
-        </div>
-        <h1 class="color-names">yellow</h1>
-        <div class="box-buttons">
-            <button class="btn-yellow-36"><h1>Get started</h1></button>
-            <button class="btn-yellow-35"><h1>Get started</h1></button>
-            <button class="btn-yellow-35"><h1>Get started</h1></button>
-            <button class="btn-yellow-34"><h1>Get started</h1></button>
-            <button class="btn-yellow-33"><h1>Get started</h1></button>
-            <button class="btn-yellow-32"><h1>Get started</h1></button>
-            <button class="btn-yellow-31"><h1>Get started</h1></button>
-            <button class="btn-yellow-30"><h1>Get started</h1></button>
-            <button class="btn-yellow-29"><h1>Get started</h1></button>
-            <button class="btn-yellow-28"><h1>Get started</h1></button>
-            <button class="btn-yellow-27"><h1>Get started</h1></button>
-            <button class="btn-yellow-26"><h1>Get started</h1></button>
-            <button class="btn-yellow-25"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-24"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-23"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-22"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-21"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-20"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-19"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-18"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-17"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-16"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-15"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-yellow-14"><h1 style="color: black;">Get started</h1></button>
-            
-        </div>
-        <h1 class="color-names">green</h1>
-        <div class="box-buttons">
-          
-            <button class="btn-green-36"><h1>Get started</h1></button>
-            <button class="btn-green-35"><h1>Get started</h1></button>
-            <button class="btn-green-34"><h1>Get started</h1></button>
-            <button class="btn-green-33"><h1>Get started</h1></button>
-            <button class="btn-green-32"><h1>Get started</h1></button>
-            <button class="btn-green-31"><h1>Get started</h1></button>
-            <button class="btn-green-30"><h1>Get started</h1></button>
-            <button class="btn-green-29"><h1>Get started</h1></button>
-            <button class="btn-green-28"><h1>Get started</h1></button>
-            <button class="btn-green-27"><h1>Get started</h1></button>
-            <button class="btn-green-26"><h1>Get started</h1></button>
-            <button class="btn-green-25"><h1>Get started</h1></button>
-            <button class="btn-green-24"><h1>Get started</h1></button>
-            <button class="btn-green-23"><h1>Get started</h1></button>
-            <button class="btn-green-22"><h1>Get started</h1></button>
-            <button class="btn-green-21"><h1>Get started</h1></button>
-            <button class="btn-green-20"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-19"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-18"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-17"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-16"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-15"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-14"><h1 style="color: black;">Get started</h1></button>
-            <button class="btn-green-13"><h1 style="color: black;">Get started</h1></button>
-        </div>
+      <div class="box-buttons">
+        <button class="setting-btn" onclick="showCode('settings-btn')">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar1"></span>
+        </button>
+      </div>
+      <div class="box-buttons">
+        <button class="button-3" onclick="showCode('button-3')">
+          <span class="transition"></span>
+          <span class="gradient"></span>
+          <span class="label">Button</span>
+        </button>
+      </div>
 
-       
-    
+      <div class="box-buttons">
+        <button class="button-4" onclick="showCode('button-4')">Button</button>
+      </div>
+      <div class="box-buttons">
+        <button class="button-5" onclick="showCode('button-5')">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg> Explore me
+        </button>
+      </div>
 
+      <div class="box-buttons">
+        <button class="button-6" onclick="showCode('button-6')">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor"
+                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <span>Send</span>
+        </button>
+      </div>
+      <div class="box-buttons">
+        <a class="playstore-button" href="#" onclick="showCode('playstore-button')">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 512 512">
+            <path
+              d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z">
+            </path>
+          </svg>
+          <span class="texts">
+            <span class="text-1">GET IT ON</span>
+            <span class="text-2">Google Play</span>
+          </span>
+        </a>
     </div>
 
-<script>
-        // Function to set the text color of the button text to match the button's background color
-        function setButtonTextColor() {
-            const buttons = document.querySelectorAll("button");
-            buttons.forEach((button) => {
-                const h1 = button.querySelector("h1.button-text");
-                if (h1) {
-                    const bgColor = window.getComputedStyle(button).backgroundColor;
-                    h1.style.color = bgColor;
-                }
-            });
-        }
+    <div class="box-buttons">
+      <button class="button-7" onclick="showCode('button-7')">
+        <span>BUTTON</span>
+      </button>
+    </div>
+      <!-- Add more buttons with onclick="showCode('button-class')" -->
+    </div>
+  </div>
 
-        // Call the function to set the text color
-        setButtonTextColor();
+  <div class="code-display">
+    <div class="code-box">
+      <h3>HTML</h3>
+      <button class="copy-button" onclick="copyCode('html-code')">Copy</button>
+      <pre><code id="html-code" class="html-code"></code></pre>
+    </div>
+    <div class="code-box">
+      <h3>CSS</h3>
+      <button class="copy-button" onclick="copyCode('css-code')">Copy</button>
+      <pre><code id="css-code" class="css-code"></code></pre>
+    </div>
+  </div>
 
-        // Function to copy button styles to clipboard and display in output box
-        function copyStyles(button) {
-            const styles = window.getComputedStyle(button);
+  <script>
+    const codeData = {
+      'button-1': {
+        html: `<button class="button-1">
+  Button
+</button>`,
+        css: `.button-1 {
+  position: relative;
+  border-radius: 6px;
+  width: 136px;
+  height: 56px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4169e1;
+  transition: all 0.2s ease;
+}
 
-            // Extract the required styles
-            const width = styles.width;
-            const height = styles.height;
-            const border = styles.border;
-            const borderRadius = styles.borderRadius;
-            const backgroundColor = styles.backgroundColor;
+.button-1:active {
+  transform: scale(0.96);
+}
 
-            // Create a string with the styles
-            const styleString = `.button-copy {\n  width: ${width};\n  height: ${height};\n  border: ${border};\n  border-radius: ${borderRadius};\n  background-color: ${backgroundColor};\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n font-size: 17px;\n font-family: sans-serif; }`;
+.button-1:before,
+.button-1:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
 
-            // Create the HTML example
-            const htmlString = `<button class="button-copy">Get started</button>`;
+.button-1:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #4169e1 20%, transparent 30%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4169e1 15%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
 
-            // Display the styles and HTML in the output box
-            document.getElementById("output-styles").textContent = styleString;
-            document.getElementById("output-html").textContent = htmlString;
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
 
-            // Copy the styles to the clipboard
-            navigator.clipboard.writeText(styleString)
-                .then(() => {
-                })
-                .catch((err) => {
-                    console.error("Failed to copy styles: ", err);
-                });
-        }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
 
-        // Add click event listeners to all buttons
-        const buttons = document.querySelectorAll("button");
-        buttons.forEach((button) => {
-            button.addEventListener("click", () => {
-                copyStyles(button);
-            });
-        });
-    </script>
-       <script>
-        // Function to convert RGB color to HEX
-        function rgbToHex(rgb) {
-            // Extract the RGB values from the string
-            const rgbValues = rgb.match(/\d+/g);
-            if (!rgbValues) return "#000000"; // Default to black if no match
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
 
-            // Convert each RGB value to HEX
-            const hex = rgbValues
-                .map(value => {
-                    const hexValue = parseInt(value).toString(16);
-                    return hexValue.length === 1 ? "0" + hexValue : hexValue;
-                })
-                .join("");
+.button-1:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4169e1 15%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%),
+    radial-gradient(circle, #4169e1 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
 
-            return `#${hex}`;
-        }
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
 
-        // Function to set the text of <h1> to the button's background color code
-        function setButtonTextToColorCode() {
-            const buttons = document.querySelectorAll("button");
-            buttons.forEach((button) => {
-                const h1 = button.querySelector("h1");
-                if (h1) {
-                    // Get the computed background color of the button
-                    const bgColor = window.getComputedStyle(button).backgroundColor;
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
 
-                    // Convert RGB to HEX (if necessary)
-                    const hexColor = rgbToHex(bgColor);
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}`,
+      },
+      'button-2': {
+        html: `<button href="#" class="button-2" style="--clr: #7808d0">
+  <span class="button__icon-wrapper">
+    <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg" width="10">
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"></path>
+    </svg>
 
-                    // Set the text of <h1> to the HEX color code
-                    h1.textContent = hexColor;
-                }
-            });
-        }
+    <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg button__icon-svg--copy">
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"></path>
+    </svg>
+  </span>
+  Explore All
+</button>`,
+        css: `.button-2 {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background: #4169e1;
+  color: #fff;
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
 
-        // Call the function to set the text to the color code
-        setButtonTextToColorCode();
-    </script>
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: #4169e1;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button-2:hover {
+  background-color: #000;
+}
+
+.button-2:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button-2:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button-2:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}`,
+      },
+      'settings-btn': {
+        html: ` 
+<div class="box-buttons">
+ <button class="setting-btn">
+  <span class="bar bar1"></span>
+  <span class="bar bar2"></span>
+  <span class="bar bar1"></span>
+ </button>
+</div>`,
+        css: `
+.setting-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #4169e1;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .bar {
+    width: 50%;
+    height: 2px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+  }
+  .bar::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    background: royalblue;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.3s;
+  }
+  .bar1::before {
+    transform: translateX(-4px);
+  }
+  .bar2::before {
+    transform: translateX(4px);
+  }
+  .setting-btn:hover .bar1::before {
+    transform: translateX(4px);
+  }
+  .setting-btn:hover .bar2::before {
+    transform: translateX(-4px);
+  }`,
+
+      },
+      'button-3': {
+        html: `
+<div class="box-buttons">
+ <button class="button-3">
+  <span class="transition"></span>
+  <span class="gradient"></span>
+  <span class="label">Button</span>
+ </button>
+</div>
+        `,
+        css: `
+
+
+.button-3 {
+    font-size: 17px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: royalblue;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+  }
+  
+
+  
+  .label {
+    position: relative;
+    top: -1px;
+  }
+  
+  .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background: rgb(0, 0, 0);
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button-3:hover .transition {
+    width: 14em;
+    height: 14em;
+  }
+  
+  .button-3:active {
+    transform: scale(0.97);
+  }
+  
+        `,
+      },
+      'button-4': {
+        html: `
+<div class="box-buttons">
+  <button class="button-4">Button</button>
+</div>
+        `,
+        css: `
+.button-4 {
+    background: royalblue;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+  }
+  
+  .button-4:hover {
+    background-color: #3b82f6;
+    color: #fff;
+  }
+        `,
+      },
+      'button-5': {
+        html: `
+<div class="box-buttons">
+  <button class="button-5">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+      stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+    </svg> Explore me
+  </button>
+</div>
+        `,
+        css: `
+.button-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  background: royalblue;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+}
+
+.button-5:hover {
+ color: #ffffff;
+ background: rgb(38, 77, 195);
+}
+
+.button-5:active {
+
+  transform: scale(0.95);
+
+}
+
+        `,
+      },
+      'button-6': {
+        html: `
+ <div class="box-buttons">
+  <button class="button-6">
+   <div class="svg-wrapper-1">
+     <div class="svg-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path fill="currentColor"
+        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+       </path>
+      </svg>
+     </div>
+   </div>
+   <span>Send</span>
+ </button>
+</div>
+ `,
+        css: `
+
+
+.button-6 {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button-6 span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-6 svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-6:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button-6:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button-6:hover span {
+  transform: translateX(5em);
+}
+
+.button-6:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+        `,
+      },
+      'playstore-button': {
+        html: `
+<div class="box-buttons">
+ <a class="playstore-button" href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 512 512">
+     <path
+       d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z">
+     </path>
+   </svg>
+   <span class="texts">
+     <span class="text-1">GET IT ON</span>
+     <span class="text-2">Google Play</span>
+   </span>
+ </a>
+</div>
+        `,
+        css: `
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid royalblue;
+  border-radius: 9999px;
+  background-color: royalblue;
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all  .2s ease;
+  text-decoration: none;
+}
+.playstore-button:active{
+  transform: scale(0.95);
+}
+.playstore-button:hover {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
+}
+
+        `,
+      },
+      'button-7': {
+        html: `
+<div class="box-buttons">
+ <button class="button-7">
+  <span>BUTTON</span>
+ </button>
+</div>
+`,
+        css: `
+
+.button-7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: royalblue;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.button-7:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  position: absolute;
+
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.button-7:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.button-7 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: white;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-7:hover span {
+  color: white;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-7:active{
+  transform: scale(0.95);
+}
+        `,
+      },
+
+      // Add more button data here
+    };
+
+    function showCode(buttonClass) {
+      const htmlCode = document.getElementById('html-code');
+      const cssCode = document.getElementById('css-code');
+
+      if (codeData[buttonClass]) {
+        htmlCode.textContent = codeData[buttonClass].html;
+        cssCode.textContent = codeData[buttonClass].css;
+      } else {
+        htmlCode.textContent = 'HTML code not found.';
+        cssCode.textContent = 'CSS code not found.';
+      }
+    }
+
+    function copyCode(codeId) {
+      const codeElement = document.getElementById(codeId);
+      const textArea = document.createElement('textarea');
+      textArea.value = codeElement.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('Code copied to clipboard!');
+    }
+  </script>
 </body>
 
 </html>
